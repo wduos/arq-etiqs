@@ -1,0 +1,63 @@
+@import './base.css';
+
+body {
+  overflow: hidden;
+  user-select: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-bottom: solid 2px var(--color-soft);
+}
+
+header > img {
+  height: 1.5rem;
+}
+
+header > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: transparent;
+}
+
+header > button:hover {
+  outline: solid 2px var(--accent);
+  cursor: pointer;
+}
+
+header > button > img {
+  height: 1rem;
+}
+
+.sidebar {
+  position: absolute;
+  top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  width: 14rem;
+  height: calc(100vh);
+  padding: 1rem;
+  border-right: solid 2px var(--color-soft);
+  background-color: white;
+  transition: left 0.2s ease-out;
+}
+.sidebar.show {
+  left: 0rem;
+}
+.sidebar.hide {
+  left: -14rem;
+}
+
+.sidebar > small {
+  color: var(--color-text-dim);
+  font-weight: 600;
+}
