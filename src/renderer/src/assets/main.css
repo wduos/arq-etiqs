@@ -100,3 +100,99 @@ header > button > img {
   color: var(--color-text-dim);
   font-weight: 600;
 }
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal.hide {
+  display: none;
+}
+
+.modal > .modalContent {
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: calc(100% - 5rem);
+  max-width: 800px;
+  height: calc(100% - 5rem);
+  max-height: 800px;
+  background-color: white;
+}
+
+.modal > .modalContent > .modalTitle {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.modal > .modalContent > .closeModalBtn {
+  position: absolute;
+  top: 1.2rem;
+  right: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
+
+.modal > .modalContent > .closeModalBtn:hover {
+  cursor: pointer;
+}
+
+.modal > .modalContent > .closeModalBtn:hover > svg {
+  fill: var(--accent-light);
+}
+
+.modal > .modalContent > .closeModalBtn > svg {
+  height: 1.2rem;
+  fill: var(--color-text);
+}
+
+.modal > .modalContent > hr {
+  margin-block: 1rem;
+  border: none;
+  height: 1px;
+  background-color: var(--color-soft);
+}
+
+.modal .modalMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+.modalContent > div > h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.printerInfoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.printerInfoContainer > p {
+  color: var(--color-text-dim);
+}
+
+.printerInfoContainer > svg {
+  height: 1rem;
+}
