@@ -8,12 +8,42 @@ body {
 header {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: space-between;
   padding: 1rem;
   border-bottom: solid 2px var(--color-soft);
 }
 
-header > img {
+header > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header > div > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: transparent;
+}
+
+header > div > button > svg {
+  height: 1.2rem;
+  fill: var(--color-text);
+  transition: 0.2s ease-out fill;
+}
+
+header > div > button:hover {
+  cursor: pointer;
+}
+
+header > div > button:hover > svg {
+  fill: var(--accent-light);
+}
+
+header > div > #DSV-logo {
   height: 1.5rem;
 }
 
@@ -27,9 +57,18 @@ header > button {
   background-color: transparent;
 }
 
+header > button > svg {
+  height: 1.2rem;
+  fill: var(--color-text);
+  transition: 0.2s ease-out fill;
+}
+
 header > button:hover {
-  outline: solid 2px var(--accent);
   cursor: pointer;
+}
+
+header > button:hover > svg {
+  fill: var(--accent-light);
 }
 
 header > button > img {
